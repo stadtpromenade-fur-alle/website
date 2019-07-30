@@ -1,0 +1,52 @@
+.h-100 {
+    height: 100% !important;
+}
+
+.rounded-lg{
+    border-radius: 15px;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.header-content {
+    background-color: rgba(0,0,0,.6);
+    padding: 20px 50px !important;
+}
+
+header.narrow {
+    background-image: url('../img/header-narrow.png');
+    background-color: $theme-primary;
+    padding-top: 50px;
+    #bg-asset-1{
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 40px;
+    }
+    #bg-asset-2{
+        height: 100%;
+        position: absolute;
+        bottom: -20px;
+        right: 40px;
+        overflow: hidden;
+    }
+    .header-content {
+        background-color: unset;
+    }
+    @media (min-width: 768px) {
+        min-height: unset;
+        height: 20vh;
+        padding: 200px 0 0;
+    }
+    @media (max-width: 768px) {
+        h1 {
+            background-color: rgba(0,0,0,.6);
+        }
+    }
+}
+
+section.contact {
+    padding: 100px 0 50px;
+}

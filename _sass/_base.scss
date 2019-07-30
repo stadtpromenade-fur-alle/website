@@ -155,7 +155,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header.png');
     text-align: center;
     color: white;
     .header-content {
@@ -316,9 +316,13 @@ header {
 }
 
 // Contact
-#contact .fa {
-    color: $theme-dark;
-    font-size: 4em;
+#contact {
+    background-color: $theme-dark;
+    color: white;
+    i {
+        color: white;
+        font-size: 4em;
+    }
 }
 
 // Extras
