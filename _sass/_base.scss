@@ -203,6 +203,13 @@ header {
             }
         }
     }
+    &.narrow {
+        background-image: url('../img/header-narrow.jpg');
+        background-color: gray;
+        @media (min-width: 768px) {
+            min-height: 20%;
+        }
+    }
 }
 
 // Sections
@@ -316,9 +323,13 @@ header {
 }
 
 // Contact
-#contact .fa {
-    color: $theme-dark;
-    font-size: 4em;
+#contact {
+    background-color: $theme-dark;
+    color: white;
+    i {
+        color: white;
+        font-size: 4em;
+    }
 }
 
 // Extras
