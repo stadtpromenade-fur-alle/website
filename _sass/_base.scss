@@ -155,7 +155,7 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header.png');
     text-align: center;
     color: white;
     .header-content {
@@ -201,13 +201,6 @@ header {
                     margin-right: auto;
                 }
             }
-        }
-    }
-    &.narrow {
-        background-image: url('../img/header-narrow.jpg');
-        background-color: gray;
-        @media (min-width: 768px) {
-            min-height: 20%;
         }
     }
 }
