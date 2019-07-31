@@ -1,5 +1,21 @@
 ---
-layout: page
+layout: default
 ---
 
-{{ content }}
+<header class="narrow">
+    <img src="{{ site.url }}//img/illustrations/sternchen_og.png" alt="" id="bg-asset-1">
+    <img src="{{ site.url }}//img/illustrations/uhr_og.png" alt="" id="bg-asset-2" style="z-index: 1">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <h1>Blog Post</h1>
+        </div>
+    </div>
+</header>
+
+<div class="container">
+  <div class="row">
+    <h2>{{ page.title }}</h2>
+    <p>Von {{ page.author }} am {{ page.date }}</p>
+    {{ content }}
+  </div>
+</div>
