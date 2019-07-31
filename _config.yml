@@ -1,9 +1,9 @@
 # Site settings
 title: Stadtpromenade für alle
 email: info@stadtpromenade-fuer-alle.de
-description: > # this means to ignore newlines until "baseurl:"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: https://stadtpromenade-fuer-alle.de # the base hostname & protocol for your site
+description: "" # this means to ignore newlines until "baseurl:"
+baseurl: /cb-stadtprom-alternative # the subpath of your site, e.g. /blog/
+url: https://saphareas.github.io # the base hostname & protocol for your site
 
 navigation:
   - {name: Über uns, link: '/about'}
@@ -32,7 +32,7 @@ social:
 
 # SEO
 description: "Wir fordern: „Stadtpromenade für alle“!"
-url: stadtpromenade-fuer-alle.de
+#url: stadtpromenade-fuer-alle.de
 author: Fabian Große
 facebook:
   publisher: https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/
