@@ -7,7 +7,7 @@ layout: default
     <img src="{{ site.url }}{{ site.baseurl }}/img/illustrations/uhr_og.png" alt="" id="bg-asset-2" style="z-index: 1">
     <div class="header-content">
         <div class="header-content-inner">
-            <h1>Blog Post</h1>
+            <h1>Neuigkeiten</h1>
         </div>
     </div>
 </header>
@@ -15,7 +15,27 @@ layout: default
 <div class="container">
   <div class="row">
     <h2>{{ page.title }}</h2>
-    <p>Von {{ page.author }} am {{ page.date }}</p>
+    <p>Von {{ page.author }} am {{ page.date | date: "%d. %b. %Y" }}</p>
     {{ content }}
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h2 class="section-title">Ähnliche Stories</h2>
+    </div>
+    {% for post in site.posts offset:0 limit:3 %}
+    <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
+      <article class="card shadow">
+        <img class="rounded card-img-top" src="{{ site.baseurl }}/img/blog/{{ post.image }}" alt="{{ post.title }}">
+        <div class="card-body">
+            <h4 class="card-title"><b>{{ post.title | escape }}</b></h4>
+            <p class="card-text">{{ post.content | strip_html | truncate: 127 }}</p>
+            <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Mehr...</a>
+        </div>
+      </article>
+    </div>
+    {% endfor %}
   </div>
 </div>
