@@ -50,3 +50,39 @@ header.narrow {
 section.contact {
     padding: 100px 0 50px;
 }
+
+.btn-secondary {
+    @include button-variant(white, $theme-secondary, $theme-secondary);
+}
+
+.color-secondary {
+    color: $theme-secondary !important;
+}
+
+.color-white {
+    color: white !important;
+}
+
+.mv-80 {
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+.mv-20 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.mb-40 {
+    margin-bottom: 40px;
+}
+.w-100 {
+    width: 100%;
+}
+.bg-dots {
+    background-image: url("../img/backgrounds/bg-dots.png");
+}
+.justify-content-center {
+    justify-content: center;
+} 
+.d-flex {
+    display: flex;
+}

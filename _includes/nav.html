@@ -16,7 +16,7 @@
             <ul class="nav navbar-nav navbar-right">
                 {% for nav in site.navigation %}
                 <li>
-                    <a class="page-scroll" href="{{ nav.link }}">{{ nav.name }}</a>
+                    <a class="page-scroll" href="{{ site.url }}{{ nav.link }}">{{ nav.name }}</a>
                 </li>
                 {% endfor %}
             </ul>
