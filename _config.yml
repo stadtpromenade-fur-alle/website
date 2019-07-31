@@ -6,16 +6,17 @@ baseurl: /cb-stadtprom-alt # the subpath of your site, e.g. /blog/
 url: https://saphareas.github.io # the base hostname & protocol for your site
 
 navigation:
-  - {name: Über uns, link: '#about'}
-  - {name: News, link: '#news'}
-  - {name: Kontakt, link: '#contact'}
+  - {name: Über uns, link: '/about'}
+  - {name: News, link: '/news'}
+  - {name: Chronik, link: '/chronik'}
+  - {name: Kontakt, link: '/contact'}
 
 header:
   title: Cottbuser Stadtpromenade Für Alle!
   subtitle: ""
 
 about:
-  title: Über uns!
+  title: Das traurige Herz von Cottbus
   subtitle: "Es klafft eine offene Wunde in unserer Stadt: Die Brache in der Stadtpromenade. Sie steht symbolisch für die Vernichtung von Hunderttausenden Existenzen auf dem Gebiet der DDR. Wir fordern: „Stadtpromenade für alle“! Wir wollen über die Nutzung des Herzens unserer Stadt mitentscheiden! Dieses Recht überlassen wir nicht Investoren oder Spekulanten. <br> <b>Setzen wir dem Ausverkauf unserer Stadt ein Ende – holen wir zurück, was uns gehörte!</b>"
 
 goal: Unsere Ziele
