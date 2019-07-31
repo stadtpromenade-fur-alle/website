@@ -34,12 +34,14 @@
 // }
 
 // variables.less
-$theme-primary: #9c0808;
-$theme-dark: #222;
+$theme-primary: #af0d0d;
+$theme-secondary: #a5ad20;
+$theme-dark: #5f5f5f;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "mixins",
         "base",
-        "custom"
+        "custom",
+        "bs4-cards";
 ;
