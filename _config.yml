@@ -7,7 +7,7 @@ url: https://stadtpromenade-fuer-alle.de # the base hostname & protocol for your
 navigation:
   - {name: Über uns, link: '/about'}
   - {name: News, link: '/news'}
-  - {name: Chronik, link: '/chronik'}
+  #- {name: Chronik, link: '/chronik'}
   - {name: Kontakt, link: '/contact'}
 
 header:
@@ -34,7 +34,7 @@ description: "Wir fordern: „Stadtpromenade für alle“!"
 author: Fabian Große
 facebook:
   publisher: https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/
-logo: /assets/images/illustrations/alles_og.png
+logo: /img/illustrations/alles_og.png
 lang: de_DE
 
 # Analytics
@@ -62,3 +62,4 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - _posts/_template.md
