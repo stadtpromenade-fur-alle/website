@@ -43,11 +43,11 @@ p {
 }
 
 .bg-primary {
-    background-color: $theme-primary;
+    background-color: $theme-primary !important;
 }
 
 .bg-dark {
-    background-color: $theme-dark;
+    background-color: $theme-dark !important;
     color: white;
 }
 
@@ -71,10 +71,11 @@ aside {
 
 .navbar-default {
     background-color: white;
+    border-bottom: 1px solid;
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
-    .navbar-header .navbar-brand {
+    .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
         font-weight: 700;
@@ -111,7 +112,7 @@ aside {
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: rgba(white, .3);
-        .navbar-header .navbar-brand {
+        .navbar-brand {
             color: rgba(white, .7);
             &:hover,
             &:focus {
@@ -128,7 +129,7 @@ aside {
         &.affix {
             background-color: white;
             border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
+            .navbar-brand {
                 color: $theme-primary;
                 font-size: 14px;
                 &:hover,
