@@ -16,6 +16,10 @@ body {
     overflow: hidden;
 }
 
+section {
+    padding: 50px 0;
+}
+
 header {
     .header-content {
         background-color: rgba(0,0,0,.6);
@@ -129,5 +133,19 @@ section.contact {
         left: 16px;
         top: 13px;
         font-size: 20px;
+    }
+}
+
+.bouncy {
+    text-align: center;
+    margin-top: 50px;
+    -moz-animation: bounce 2s infinite;
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+    a {
+        text-decoration: none !important;
+        &.light {
+            color: white !important;
+        }
     }
 }
