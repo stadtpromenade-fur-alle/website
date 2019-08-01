@@ -9,8 +9,9 @@ title: Neuigkeiten
       {% for post in site.posts %}
       <div class="col-lg-3 col-sm-4 mb-4">
         <article class="card shadow">
-          <img class="rounded card-img-top" src="{{ site.baseurl }}/img/blog/{{ post.image }}" alt="{{ post.title }}">
+            <a href="{{ post.url | relative_url }}"><img class="rounded card-img-top" src="{{ site.baseurl }}/img/blog/{{ post.image }}" alt="{{ post.title }}"></a>
           <div class="card-body">
+            <span class="text-muted">Vom {{ post.date | date: "%d. %b. %Y" }}</span>
             <h4 class="card-title"><b>{{ post.title | escape }}</b></h4>
             <p class="card-text">{{ post.content | strip_html | truncate: 127 }}</p>
             <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Mehr...</a>

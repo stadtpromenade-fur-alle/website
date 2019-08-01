@@ -3,8 +3,8 @@ layout: default
 ---
 
 <header class="narrow">
-    <img src="{{ site.url }}{{ site.baseurl }}/img/illustrations/sternchen_og.png" alt="" id="bg-asset-1">
-    <img src="{{ site.url }}{{ site.baseurl }}/img/illustrations/uhr_og.png" alt="" id="bg-asset-2" style="z-index: 1">
+    <img src="{{ site.url }}{{ site.baseurl }}/img/illustrations/sternchen_og.png" alt="Alte Mokka-Bar 'Sternchen'" id="bg-asset-1">
+    <img src="{{ site.url }}{{ site.baseurl }}/img/illustrations/uhr_og.png" alt="Die große Uhr mit Sonne" id="bg-asset-2" style="z-index: 1">
     <div class="header-content">
         <div class="header-content-inner">
             <h1>Neuigkeiten</h1>
@@ -26,6 +26,7 @@ layout: default
       </div>
     </div>
   </div>
+  {% include share-buttons.html %}
 </div>
 
 <div class="container">
@@ -36,8 +37,9 @@ layout: default
     {% for post in site.posts offset:0 limit:3 %}
     <div class="col-lg-3 col-sm-4 mb-4 mb-lg-0">
       <article class="card shadow">
-        <img class="rounded card-img-top" src="{{ site.baseurl }}/img/blog/{{ post.image }}" alt="{{ post.title }}">
+        <a href="{{ post.url | relative_url }}"><img class="rounded card-img-top" src="{{ site.baseurl }}/img/blog/{{ post.image }}" alt="{{ post.title }}"></a>
         <div class="card-body">
+            <span class="text-muted">Vom {{ post.date | date: "%d. %b. %Y" }}</span>
             <h4 class="card-title"><b>{{ post.title | escape }}</b></h4>
             <p class="card-text">{{ post.content | strip_html | truncate: 127 }}</p>
             <a href="{{ post.url | relative_url }}" class="btn btn-xs btn-primary">Mehr...</a>
