@@ -1,16 +1,9 @@
 body {
     overflow-x: hidden;
 }
-.h-100 {
-    height: 100% !important;
-}
 
 .rounded-lg{
-    border-radius: 15px;
-}
-
-.overflow-hidden {
-    overflow: hidden;
+    border-radius: 15px !important;
 }
 
 section {
@@ -80,38 +73,12 @@ section.contact {
     color: $theme-secondary !important;
 }
 
-.color-white {
-    color: white !important;
-}
-
-.mv-80 {
-    margin-top: 80px;
-    margin-bottom: 80px;
-}
-
-.mv-20 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.mb-40 {
-    margin-bottom: 40px;
-}
-
-.w-100 {
-    width: 100%;
-}
-
 .bg-dots {
     background-image: url("../img/backgrounds/bg-dots.png");
 }
 
 .justify-content-center {
     justify-content: center;
-}
-
-.d-flex {
-    display: flex;
 }
 
 #btn-top {
