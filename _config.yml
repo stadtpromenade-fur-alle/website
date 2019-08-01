@@ -37,11 +37,14 @@ facebook:
 logo: /assets/images/illustrations/alles_og.png
 lang: de_DE
 
+# Analytics
+google-analytics: UA-32866583-2
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 plugins:
+  - jekyll-sitemap
   - jekyll-seo-tag
 
 # Pages Path
