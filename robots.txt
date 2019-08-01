@@ -1,0 +1,3 @@
+User-agents: *
+Disallow: /img/
+Sitemap: https://stadtpromenade-fuer-alle.de/sitemap.xml
