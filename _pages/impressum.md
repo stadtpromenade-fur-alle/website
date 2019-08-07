@@ -1,6 +1,7 @@
 ---
 layout: legal
 title: Impressum
+description: Impressum
 ---
 
 ## Diensteanbieter

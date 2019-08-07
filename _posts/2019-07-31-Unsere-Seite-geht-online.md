@@ -1,8 +1,10 @@
 ---
 layout: post
 title: Unsere Internetseite geht online
+description: Lorem ipsum dolor sit amet
 date: 2019-07-31 13:11:55 +0200
 image: post-1.png
+alt: Logo "Cottbuser Stadtpromenade für alle"
 author: Fabian
 tags: ""
 ---
