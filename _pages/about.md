@@ -1,6 +1,7 @@
 ---
 layout: about
 title: Über Uns
+description: Was wir fordern und warum wir das tun.
 image: img/brache.png
 alt: Brache in der Stadtpromenade
 license: <a href="https://commons.wikimedia.org/w/index.php?curid=77913766">Wikimedia/Trio3D</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>

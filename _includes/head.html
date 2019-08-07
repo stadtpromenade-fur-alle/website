@@ -5,8 +5,6 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{{ site.title }}</title>
-
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -40,5 +38,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+
+    <meta itemprop="description" name="description" content="{% if page.description %}{{ page.description | truncate: 160 }} | {% endif %}{{ site.description | truncate: 160  }}" />
+
     {% seo %}
 </head>
