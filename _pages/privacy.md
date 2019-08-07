@@ -1,6 +1,7 @@
 ---
 layout: legal
 title: Datenschutzerklärung
+description: Datenschutzerklärung
 ---
 
 ## Einleitung
