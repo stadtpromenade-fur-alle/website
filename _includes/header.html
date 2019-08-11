@@ -3,10 +3,8 @@
         <div class="header-content-inner">
             <h1>{{ site.header.title }}</h1>
             <hr>
-            <p>{{ site.header.subtitle }}</p>
-            <div class="bouncy">
-                <a href="#about" class="fas fa-chevron-down fa-4x page-scroll light"></a>
-            </div>
+            <p class="text-light">{{ site.header.subtitle }}</p>
+            {% include bouncy-chevron.html link="#about" color="text-white" %}
         </div>
     </div>
 </header>
