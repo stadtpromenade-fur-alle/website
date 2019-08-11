@@ -1,12 +1,12 @@
 ---
-layout: post
 title: "#WannWennNichtJetzt"
-description: "Aufruf zu #WannWennNichtJetzt, wir sid dabei"
-date: 2019-07-31 17:41:55 +0200
+layout: post
+description: 'Aufruf zu #WannWennNichtJetzt, wir sid dabei'
+date: '2019-07-31 17:36:12'
 image: post-2.jpeg
 alt: Flyer "Cottbuser Stadtpromenade für alle"
 author: Fabian
-tags: ""
+tags: [cottbus, stadtpromenade, aktion, wannwennnichtjetzt]
 ---
 
-Am Samstag, dem 03.08. werden wir beim [#WannWennNichtJetzt](https://wannwennnichtjetzt.org/)-Festival auf dem Erich-Kästner-Platz vertreten sein.
+Lernt uns kennen! Auftakt zur Initiative "Stadtpromenade für Alle" ist unser kleiner Spaziergang "Trauriges Herz". Auch auf dem Festivalgelände von [#WannWennNichtJetzt](https://wannwennnichtjetzt.org/) findet ihr unsere Leutchen und Infos. Am Samstag, dem 03.08. ab 10 Uhr auf dem Erich-Kästner-Platz.
