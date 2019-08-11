@@ -5,14 +5,14 @@ body {
 }
 
 body {
-    @include serif-font;
+    @include sans-serif-font;
     overflow-x: hidden;
 }
 
 hr {
     border-color: $theme-primary;
     border-width: 3px;
-    max-width: 50px;
+    max-width: 70px;
 }
 
 hr.light {
@@ -68,6 +68,9 @@ aside {
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
+        > img {
+            height: 2rem;
+        }
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);

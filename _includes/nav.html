@@ -1,5 +1,8 @@
-<nav id="mainNav" class="navbar navbar-expand-sm navbar-dark navbar-default fixed-top">
-    <a class="navbar-brand page-scroll" href="/">Home</a>
+<nav id="mainNav" class="navbar navbar-expand-md navbar-dark navbar-default fixed-top">
+    <a class="navbar-brand page-scroll" href="/">
+        {% if site.brand %} <img src="{{ site.baseurl }}{{ site.brand }}" alt="Start">{% endif %}
+        Start
+    </a>
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
         <span class="navbar-toggler-icon"></span>
     </button>
