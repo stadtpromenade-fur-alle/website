@@ -5,13 +5,14 @@ body {
 }
 
 body {
-    @include serif-font;
+    @include sans-serif-font;
+    overflow-x: hidden;
 }
 
 hr {
     border-color: $theme-primary;
     border-width: 3px;
-    max-width: 50px;
+    max-width: 70px;
 }
 
 hr.light {
@@ -42,43 +43,34 @@ p {
     margin-bottom: 20px;
 }
 
-.bg-primary {
-    background-color: $theme-primary;
-}
-
-.bg-dark {
-    background-color: $theme-dark;
-    color: white;
-}
-
 .text-faded {
     color: rgba(white, .7);
 }
 
 section {
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 aside {
     padding: 50px 0;
 }
 
-.no-padding {
-    padding: 0;
-}
-
 // Navigation
 
 .navbar-default {
     background-color: white;
+    border-bottom: 1px solid;
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
-    .navbar-header .navbar-brand {
+    .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
+        > img {
+            height: 2rem;
+        }
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
@@ -86,8 +78,8 @@ aside {
     }
     .nav {
         > li {
-            > a,
-            > a:focus {
+            > .nav-link,
+            > .nav-link:focus {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
@@ -97,8 +89,8 @@ aside {
                 }
             }
             &.active {
-                > a,
-                > a:focus {
+                > .nav-link,
+                > .nav-link:focus {
                     color: $theme-primary !important;
                     background-color: transparent;
                     &:hover {
@@ -111,15 +103,15 @@ aside {
     @media (min-width: 768px) {
         background-color: transparent;
         border-color: rgba(white, .3);
-        .navbar-header .navbar-brand {
+        .navbar-brand {
             color: rgba(white, .7);
             &:hover,
             &:focus {
                 color: white;
             }
         }
-        .nav > li > a,
-        .nav > li > a:focus {
+        .nav > li > .nav-link,
+        .nav > li > .nav-link:focus {
             color: rgba(white, .7);
             &:hover {
                 color: white;
@@ -128,7 +120,7 @@ aside {
         &.affix {
             background-color: white;
             border-color: rgba($theme-dark, .5);
-            .navbar-header .navbar-brand {
+            .navbar-brand {
                 color: $theme-primary;
                 font-size: 14px;
                 &:hover,
@@ -136,13 +128,18 @@ aside {
                     color: darken($theme-primary, 10%);
                 }
             }
-            .nav > li > a,
-            .nav > li > a:focus {
+            .nav > li > .nav-link,
+            .nav > li > .nav-link:focus {
                 color: $theme-dark;
                 &:hover {
                     color: $theme-primary;
                 }
             }
+        }
+    }
+    @media (max-width: 767px) {
+        .navbar-toggler > .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
         }
     }
 }
@@ -155,19 +152,20 @@ header {
     min-height: auto;
     @include background-cover;
     background-position: center;
-    background-image: url('../img/header.jpg');
+    background-image: url('../img/header.png');
     text-align: center;
     color: white;
     .header-content {
         position: relative;
         text-align: center;
-        padding: 100px 15px 100px;
+        padding: 20px 50px;
         width: 100%;
+        background-color: rgba(0,0,0,.6);
         .header-content-inner {
             h1 {
                 font-weight: 700;
                 text-transform: uppercase;
-                margin-top: 0;
+                margin-top: 50px;
                 margin-bottom: 0;
             }
             hr {
@@ -194,6 +192,9 @@ header {
                 max-width: 1000px;
                 margin-left: auto;
                 margin-right: auto;
+                h1 {
+                    margin-top: 0;
+                }
                 p {
                     font-size: 18px;
                     max-width: 80%;
@@ -203,13 +204,50 @@ header {
             }
         }
     }
+
+    &.narrow {
+        background-image: url('../img/header-narrow.png');
+        background-color: $theme-primary;
+        padding-top: 50px;
+        overflow-y: hidden;
+        #bg-asset-1 {
+            height: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 40px;
+        }
+        #bg-asset-2 {
+            height: 100%;
+            position: absolute;
+            bottom: -20px;
+            right: 40px;
+            overflow: hidden;
+        }
+        .header-content {
+            background-color: unset;
+            .header-content-inner {
+                h1 {
+                    background-color: rgba(0,0,0,.6);
+                    margin-top: 0;
+                }
+            }
+        }
+        @media (min-width: 768px) {
+            min-height: unset;
+            height: 20vh;
+            padding: 200px 0 0;
+            .header-content {
+                .header-content-inner {
+                    h1 {
+                        background-color: unset;
+                    }
+                }
+            }
+        }
+    }
 }
 
 // Sections
-
-.section-heading {
-    margin-top: 0;
-}
 
 .service-box {
     max-width: 400px;
@@ -285,8 +323,21 @@ header {
 }
 
 // Bootstrap Overrides
+.bg-primary {
+    background-color: $theme-primary !important;
+}
+
+.bg-dark {
+    background-color: $theme-dark !important;
+    color: white;
+}
+
 .text-primary {
-    color: $theme-primary;
+    color: $theme-primary !important;
+}
+
+.rounded-lg {
+    border-radius: 15px !important;
 }
 
 .no-gutter > [class*='col-'] {
@@ -316,9 +367,13 @@ header {
 }
 
 // Contact
-#contact .fa {
-    color: $theme-dark;
-    font-size: 4em;
+#contact {
+    background-color: $theme-dark;
+    color: white;
+    i {
+        color: white;
+        font-size: 4em;
+    }
 }
 
 // Extras
