@@ -4,6 +4,7 @@ email: info@stadtpromenade-fuer-alle.de
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: https://stadtpromenade-fuer-alle.de # the base hostname & protocol for your site
 
+brand: /img/illustrations/sternchen_og.png
 navigation:
   - {name: Über uns, link: '/about'}
   - {name: News, link: '/news'}
