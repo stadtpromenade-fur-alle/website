@@ -1,12 +1,67 @@
 # Site settings
-title:
-email:
-description: > # this means to ignore newlines until "baseurl:"
+title: Stadtpromenade für alle
+email: info@stadtpromenade-fuer-alle.de
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "" # the base hostname & protocol for your site
+url: https://stadtpromenade-fuer-alle.de # the base hostname & protocol for your site
 
-twitter_username:
-github_username:
+brand: /img/illustrations/sternchen_og.png
+navigation:
+  - {name: Über uns, link: '/about'}
+  - {name: News, link: '/news'}
+  #- {name: Chronik, link: '/chronik'}
+  - {name: Kontakt, link: '/contact'}
+
+header:
+  title: Cottbuser <br> Stadtprome&shy;nade <br> Für Alle!
+  subtitle: ""
+
+about:
+  title: Das traurige Herz von Cottbus
+  subtitle: "Es klafft eine offene Wunde in unserer Stadt: Die Brache in der Stadtpromenade. Sie steht symbolisch für die Vernichtung von Hunderttausenden Existenzen auf dem Gebiet der DDR. Wir fordern: „Stadtpromenade für alle“! Wir wollen über die Nutzung des Herzens unserer Stadt mitentscheiden! Dieses Recht überlassen wir nicht Investoren oder Spekulanten. <br> <b>Setzen wir dem Ausverkauf unserer Stadt ein Ende – holen wir zurück, was uns gehörte!</b>"
+
+goal: Unsere Ziele
+goals:
+  - {title: "Mitbestimmung", subtitle: "Wir wollen die Nutzung von öffentlichem Raum demokratisieren.", glyph: "fa-vote-yea"}
+  - {title: "Privatisierung stoppen", subtitle: "Öffentliche Einrichtungen und öffentlicher Raum sollen nicht in privaten Händen sein.", glyph: "fa-users"}
+
+social:
+  facebook: {name: Auf Facebook, link: "https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/" }
+  twitter: ""
+  github: {name: Auf Github, link: "https://github.com/Saphareas/cb-stadtprom-fuer-alle" }
+
+
+# SEO
+description: "Wir fordern: „Cottbuser Stadtpromenade für alle“!"
+author: Fabian Große
+facebook:
+  publisher: https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/
+logo: /img/illustrations/alles_og.png
+lang: de_DE
+
+# Analytics
+google-analytics: UA-32866583-2
 
 # Build settings
 markdown: kramdown
+permalink: pretty
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-admin
+
+# Pages Path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+include:
+  - _pages
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _posts/_template.md

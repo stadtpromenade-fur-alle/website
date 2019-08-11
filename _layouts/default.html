@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="de">
+
+{% include head.html %}
+
+<body id="page-top">
+  {% include nav.html %}
+
+  {{ content }}
+
+  {% include contact.html %}
+
+  <a href="#page-top" id="btn-top" class="page-scroll" style="display: none">
+    <i class="fas fa-chevron-up fa-2x"></i><br>
+  </a>
+
+  {% include scripts.html %}
+  {% include cookie-notice.html %}
+</body>
+
+</html>
