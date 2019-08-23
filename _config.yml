@@ -13,11 +13,11 @@ navigation:
 
 header:
   title: Cottbuser <br> Stadtprome&shy;nade <br> Für Alle!
-  subtitle: ""
+  subtitle: "Ist das Demokratie, wenn sich ein Spekulant – unter dem Schutz der politischen Machthaber – über den Willen von Zehntausenden Cottbusern hinwegsetzen darf? Setzen wir dem Ausverkauf unserer Stadt ein Ende – holen wir zurück, was uns gehörte! <br><em>Wir fordern: „Stadtpromenade für alle“!</em><br> Wir wollen über die Nutzung des Herzens unserer Stadt mitentscheiden!"
 
 about:
   title: Das traurige Herz von Cottbus
-  subtitle: "Es klafft eine offene Wunde in unserer Stadt: Die Brache in der Stadtpromenade. Sie steht symbolisch für die Vernichtung von Hunderttausenden Existenzen auf dem Gebiet der DDR. Wir fordern: „Stadtpromenade für alle“! Wir wollen über die Nutzung des Herzens unserer Stadt mitentscheiden! Dieses Recht überlassen wir nicht Investoren oder Spekulanten. <br> <b>Setzen wir dem Ausverkauf unserer Stadt ein Ende – holen wir zurück, was uns gehörte!</b>"
+  subtitle: "Es klafft eine offene Wunde in unserer Stadt: Die Brache in der Stadtpromenade. Sie steht symbolisch für die Vernichtung von Hunderttausenden Existenzen auf dem Gebiet der DDR. Der Handlanger des neuen kapitalistischen Systems, die Treuhandanstalt, hat eine ganze Epoche Kultur und Wirtschaft zerstört - mehr als je in einem Krieg vernichtet wurde! Im Gegensatz dazu wurde uns „Demokratie“ versprochen. Ist das Demokratie, wenn sich ein Spekulant – unter dem Schutz der politischen Machthaber – über den Willen von Zehntausenden Cottbusern hinwegsetzen darf? Lassen wir uns nicht länger für dumm verkaufen!"
 
 goal: Unsere Ziele
 goals:
@@ -27,7 +27,7 @@ goals:
 social:
   facebook: {name: Auf Facebook, link: "https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/" }
   twitter: ""
-  github: {name: Auf Github, link: "https://github.com/Saphareas/cb-stadtprom-fuer-alle" }
+  github: {name: Auf Github, link: "https://github.com/stadtpromenade-fur-alle" }
 
 
 # SEO
