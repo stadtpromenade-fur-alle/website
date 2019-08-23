@@ -7,7 +7,7 @@ alt: Brache in der Stadtpromenade
 license: <a href="https://commons.wikimedia.org/w/index.php?curid=77913766">Wikimedia/Trio3D</a> | <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>
 ---
 
-## Das traurige Herz von Cottbus: Die Stadtpromenade
+## Die Stadtpromenade: Das traurige Herz von Cottbus
 
 In der Cottbuser Stadtpromenade modert eine absurd wirkende Brache vor sich hin. Warum lassen die Cottbuser ihren Stadtkern seit Jahrzehnten vor sich hin gammeln?
 
