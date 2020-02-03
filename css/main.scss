@@ -2,6 +2,7 @@
 ---
 
 @charset "utf-8";
+@use "sass:string";
 
 // Example Defaults
 // $base-font-family: Helvetica, Arial, sans-serif;
@@ -34,12 +35,52 @@
 // }
 
 // variables.less
-$theme-primary: #af0d0d;
-$theme-secondary: #a5ad20;
-$theme-dark: #5f5f5f;
+$primary: #e84628;
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import "mixins", "base", "custom"
-        //"bootstrap_4/_functions", "bootstrap_4/_variables", "bootstrap_4/mixins/_border-radius", "bootstrap_4/mixins/breakpoints", "bootstrap_4/_cards"
-;
+@import "bootstrap-scss/bootstrap.scss";
 
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+        $hex: str-slice(ie-hex-str($string), 4);
+        $string:unquote("#{$hex}");
+    }
+    $string: '%23' + $string;
+	@return $string;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+nav.navbar .navbar-brand img {
+    max-height: 40px;
+    flex-shrink: 0;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='10' height='10' viewBox='0 0 8 8'%3e%3cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z' fill='" + encodecolor($primary) + "' stroke='" + encodecolor($primary) + "'/%3e%3c/svg%3e");
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='10' height='10' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z' fill='" + encodecolor($primary) + "' stroke='" + encodecolor($primary) + "'/%3e%3c/svg%3e");
+}
+.carousel-indicators li {
+    background-color: $primary;
+}
+
+@for $l from 2 through 10 {
+    .text-clamp-#{$l} {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: #{$l};
+    }
+}
