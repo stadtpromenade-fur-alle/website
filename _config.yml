@@ -11,22 +11,16 @@ navigation:
   #- {name: Chronik, link: '/chronik'}
   - {name: Kontakt, link: '/contact'}
 
-header:
-  title: Cottbuser <br> Stadtprome&shy;nade <br> Für Alle!
-  subtitle: "Ist das Demokratie, wenn sich ein Spekulant – unter dem Schutz der politischen Machthaber – über den Willen von Zehntausenden Cottbusern hinwegsetzen darf? Setzen wir dem Ausverkauf unserer Stadt ein Ende – holen wir zurück, was uns gehörte! <br><em>Wir fordern: „Stadtpromenade für alle“!</em><br> Wir wollen über die Nutzung des Herzens unserer Stadt mitentscheiden!"
-
-about:
-  title: Das traurige Herz von Cottbus
-  subtitle: "Es klafft eine offene Wunde in unserer Stadt: Die Brache in der Stadtpromenade. Sie steht symbolisch für die Vernichtung von Hunderttausenden Existenzen auf dem Gebiet der DDR. Der Handlanger des neuen kapitalistischen Systems, die Treuhandanstalt, hat eine ganze Epoche Kultur und Wirtschaft zerstört - mehr als je in einem Krieg vernichtet wurde! Im Gegensatz dazu wurde uns „Demokratie“ versprochen. Ist das Demokratie, wenn sich ein Spekulant – unter dem Schutz der politischen Machthaber – über den Willen von Zehntausenden Cottbusern hinwegsetzen darf? Lassen wir uns nicht länger für dumm verkaufen!"
-
-goal: Unsere Ziele
-goals:
-  - {title: "Mitbestimmung", subtitle: "Wir wollen die Nutzung von öffentlichem Raum demokratisieren.", glyph: "fa-vote-yea"}
-  - {title: "Privatisierung stoppen", subtitle: "Öffentliche Einrichtungen und öffentlicher Raum sollen nicht in privaten Händen sein.", glyph: "fa-users"}
+carousel:
+  - {color: ccc, title: Erste Slide, subtitle: Lorem ipsum dolor sit amet, consectetur adipiscing elit., active: true}
+  - {color: aaa, title: Zweite Slide, subtitle: Praesent commodo cursus magna, vel scelerisque nisl consectetur.}
+  - {color: 888, title: Dritte Slide, subtitle: Nulla vitae elit libero, a pharetra augue mollis interdum.}
+  - {color: 666, title: Vierte Slide, subtitle: Nulla vitae elit libero, a pharetra augue mollis interdum.}
+  - {color: 444, title: Fünfte Slide, subtitle: Nulla vitae elit libero, a pharetra augue mollis interdum.}
 
 social:
   facebook: {name: Auf Facebook, link: "https://www.facebook.com/Stadtpromenade-f%C3%BCr-Alle-329471711310920/" }
-  twitter: ""
+  mail: ""
   github: {name: Auf Github, link: "https://github.com/stadtpromenade-fur-alle" }
 
 
@@ -38,16 +32,12 @@ facebook:
 logo: /img/illustrations/alles_og.png
 lang: de_DE
 
-# Analytics
-google-analytics: UA-32866583-2
-
 # Build settings
 markdown: kramdown
 permalink: pretty
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
-  - jekyll-admin
 
 # Pages Path
 defaults:
