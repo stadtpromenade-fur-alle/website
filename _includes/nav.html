@@ -1,21 +1,26 @@
-<nav id="mainNav" class="navbar navbar-expand-md navbar-dark navbar-default fixed-top">
-    <a class="navbar-brand page-scroll" href="/">
-        {% if site.brand %} <img src="{{ site.baseurl }}{{ site.brand }}" alt="Start">{% endif %}
-        Start
-    </a>
-    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav ml-auto">
-            {% for nav in site.navigation %}
-            <li class="nav-item">
-                <a class="nav-link" href="{{ nav.link }}">{{ nav.name }}</a>
+<nav class="sticky-top navbar navbar-expand-sm navbar-dark bg-primary">
+    <div class="d-flex">
+        <a class="navbar-brand" href="#">
+            <img src="img/logo_font.png" alt="">
+        </a>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
+            aria-expanded="false" aria-label="Toggle navigation"></button>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+        <ul class="navbar-nav mt-2 mt-lg-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
             </li>
-            {% endfor %}
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" href="#">Action 1</a>
+                    <a class="dropdown-item" href="#">Action 2</a>
+                </div>
+            </li>
         </ul>
     </div>
-    <!-- /.navbar-collapse -->
 </nav>
