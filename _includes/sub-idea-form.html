@@ -1,0 +1,153 @@
+<section id="sub-idea-form" class="row">
+  <div class="col-md-6 mx-auto">
+    <div id="form-box" class="nice-box-shadow">
+      <i id="prev-btn" class="fas fa-arrow-left"></i>
+      <i id="next-btn" class="fas fa-arrow-right"></i>
+      <div id="input-group">
+        <input id="input-field" required>
+        <label id="input-label"></label>
+        <div id="input-progress"></div>
+      </div>
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Questions Array
+  const questions = [
+    { question: 'Deine E-Mail-Adresse', pattern: /\S+@\S+\.\S+/ },
+    { question: 'Dein Vorschlag', type: 'text' }
+  ];
+
+  // Transition Times
+  const shakeTime = 100; // Shake Transition Time
+  const switchTime = 200; // Transition Between Questions
+
+  // Init Position At First Question
+  let position = 0;
+
+  // Init DOM Elements
+  const formBox = document.querySelector('#form-box');
+  const nextBtn = document.querySelector('#next-btn');
+  const prevBtn = document.querySelector('#prev-btn');
+  const inputGroup = document.querySelector('#input-group');
+  const inputField = document.querySelector('#input-field');
+  const inputLabel = document.querySelector('#input-label');
+  const inputProgress = document.querySelector('#input-progress');
+  const progress = document.querySelector('#progress-bar');
+
+  // EVENTS
+
+  // Get Question On DOM Load
+  document.addEventListener('DOMContentLoaded', getQuestion);
+
+  // Next Button Click
+  nextBtn.addEventListener('click', validate);
+
+  // Input Field Enter Click
+  inputField.addEventListener('keyup', e => {
+    if (inputField.value == '')
+      inputLabel.innerHTML = questions[position].question;
+    else
+      inputLabel.innerHTML = '';
+
+
+    if (e.keyCode == 13)
+      validate();
+  });
+
+  // FUNCTIONS
+
+  // Get Question From Array & Add To Markup
+  function getQuestion() {
+    // Get Current Question
+    inputLabel.innerHTML = questions[position].question;
+    // Get Current Type
+    inputField.type = questions[position].type || 'text';
+    // Get Current Answer
+    inputField.value = questions[position].answer || '';
+    // Focus On Element
+    inputField.focus();
+
+    // Set Progress Bar Width - Variable to the questions length
+    progress.style.width = (position * 100) / questions.length + '%';
+
+    // Add User Icon OR Back Arrow Depending On Question
+    prevBtn.className = position ? 'fas fa-arrow-left' : 'fas fa-user';
+
+    showQuestion();
+  }
+
+  // Display Question To User
+  function showQuestion() {
+    inputGroup.style.opacity = 1;
+    inputProgress.style.transition = '';
+    inputProgress.style.width = '100%';
+  }
+
+  // Hide Question From User
+  function hideQuestion() {
+    inputGroup.style.opacity = 0;
+    inputLabel.style.marginLeft = 0;
+    inputProgress.style.width = 0;
+    inputProgress.style.transition = 'none';
+    inputGroup.style.border = null;
+  }
+
+  // Transform To Create Shake Motion
+  function transform(x, y) {
+    formBox.style.transform = `translate(${x}px, ${y}px)`;
+  }
+
+  // Validate Field
+  function validate() {
+    // Make Sure Pattern Matches If There Is One
+    if (!inputField.value.match(questions[position].pattern || /.+/)) {
+      // Input failed
+      formBox.className = 'error';
+      // Repeat Shake Motion -  Set i to number of shakes
+      for (let i = 0; i < 6; i++) {
+        setTimeout(transform, shakeTime * i, ((i % 2) * 2 - 1) * 20, 0);
+        setTimeout(transform, shakeTime * 6, 0, 0);
+        inputField.focus();
+      }
+    } else {
+      // Input passed
+      formBox.className = '';
+      setTimeout(transform, shakeTime * 0, 0, 10);
+      setTimeout(transform, shakeTime * 1, 0, 0);
+
+      // Store Answer In Array
+      questions[position].answer = inputField.value;
+
+      // Increment Position
+      position++;
+
+      // If New Question, Hide Current and Get Next
+      if (questions[position]) {
+        hideQuestion();
+        getQuestion();
+      } else {
+        // Remove If No More Questions
+        //hideQuestion();
+        progress.style.width = '100%';
+
+        // Form Complete
+        formComplete();
+      }
+    }
+  }
+
+  // All Fields Complete - Show h1 end
+  function formComplete() {
+    inputField.disabled = true;
+    inputField.style.opacity = 0;
+    inputProgress.style.opacity = 0;
+    inputGroup.style.border = null;
+
+    inputLabel.innerHTML = `Thanks ${questions[0].answer} You are registered and will get an email shortly`;
+    prevBtn.className = 'hide';
+    nextBtn.className = 'hide';
+  }
+</script>

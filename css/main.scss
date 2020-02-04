@@ -38,6 +38,7 @@
 $primary: #e84628;
 
 @import "bootstrap-scss/bootstrap.scss";
+@import "form-box.scss";
 
 @function encodecolor($string) {
 	@if type-of($string) == 'color' {
@@ -83,4 +84,8 @@ footer {
         overflow: hidden;
         -webkit-line-clamp: #{$l};
     }
+}
+
+.nice-box-shadow {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.1), 0 6px 10px 5px rgba(0, 0, 0, 0.1), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }

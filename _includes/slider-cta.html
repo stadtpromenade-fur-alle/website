@@ -1,64 +1,62 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 my-3">
-      <!--######################################-->
-      <!--########## Slider/Carousel ###########-->
-      <!--######################################-->
-      <section id="slider" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          {% for slide in site.carousel %}
-          <li data-target="#slider" data-slide-to="{{index - 1}}"
-              {% if slide.active %}class="active"{% endif %}></li>
-          {% endfor %}
-        </ol>
-        <div class="carousel-inner">
-          {% for slide in site.carousel %}
-          <div class="carousel-item {% if slide.active %}active{% endif %}">
-            <div class="card">
-              <div class="row no-gutters">
-                <div class="col-md-6">
-                  <img src="https://via.placeholder.com/480x360/{{slide.color}}/fff" class="card-img" alt="...">
-                </div>
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <h5 class="card-title">{{slide.title}}</h5>
-                    <h6 class="card-subtitle">{{slide.subtitle}}</h6>
-                    <p class="card-text text-clamp-5">{% lipsum 1 %}</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                  </div>
+<section id="slider-cta" class="row">
+  <div class="col-md-8 my-3">
+    <!--######################################-->
+    <!--########## Slider/Carousel ###########-->
+    <!--######################################-->
+    <section id="slider" class="carousel slide nice-box-shadow" data-ride="carousel">
+      <ol class="carousel-indicators">
+        {% for slide in site.carousel %}
+        <li data-target="#slider" data-slide-to="{{index - 1}}"
+            {% if slide.active %}class="active"{% endif %}></li>
+        {% endfor %}
+      </ol>
+      <div class="carousel-inner">
+        {% for slide in site.carousel %}
+        <div class="carousel-item {% if slide.active %}active{% endif %}">
+          <div class="card">
+            <div class="row no-gutters">
+              <div class="col-md-6">
+                <img src="https://via.placeholder.com/480x360/{{slide.color}}/fff" class="card-img" alt="...">
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">{{slide.title}}</h5>
+                  <h6 class="card-subtitle">{{slide.subtitle}}</h6>
+                  <p class="card-text text-clamp-5">{% lipsum 1 %}</p>
+                  <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                 </div>
               </div>
             </div>
           </div>
-          {% endfor %}
         </div>
-        <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </section>
-    </div>
-    <!--######################################-->
-    <!--########### Call to action ###########-->
-    <!--######################################-->
-    <div class="col-md-4 my-3">
-      <aside id="call-to-action" class="h-100">
-        <div class="card h-100 text-center">
-          <div class="card-header">
-            <a name="" id="" class="btn btn-primary" href="#" role="button">Mache einen Vorschlag, was mit der Brache geschehen soll!</a>
-          </div>
-          <div class="card-body">
-            <h1>ODER</h1>
-          </div>
-          <div class="card-footer text-muted">
-            <a name="" id="" class="btn btn-outline-primary" href="#" role="button">Sieh dir an, was andere dazu denken.</a>
-          </div>
-        </div>
-      </aside>
-    </div>
+        {% endfor %}
+      </div>
+      <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </section>
   </div>
-</div>
+  <!--######################################-->
+  <!--########### Call to action ###########-->
+  <!--######################################-->
+  <div class="col-md-4 my-3">
+    <aside id="call-to-action" class="h-100 nice-box-shadow">
+      <div class="card h-100 text-center">
+        <div class="card-header">
+          <a class="btn btn-primary" href="#" role="button">Mache einen Vorschlag, was mit der Brache geschehen soll!</a>
+        </div>
+        <div class="card-body">
+          <h1>ODER</h1>
+        </div>
+        <div class="card-footer text-muted">
+          <a class="btn btn-outline-primary" href="#" role="button">Sieh dir an, was andere dazu denken.</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
